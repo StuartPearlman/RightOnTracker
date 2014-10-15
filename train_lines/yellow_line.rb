@@ -1,0 +1,6 @@
+stops["Yellow"][30026] = "Skokie (Arrival)"
+stops["Yellow"][30027] = "Skokie (Howard-bound)"
+stops["Yellow"][30297] = "Oakton (Dempster-Skokie-bound)"
+stops["Yellow"][30298] = "Oakton (Howard-bound)"
+stops["Yellow"][30175] = "Howard (NB) (Linden, Skokie-bound)"
+stops["Yellow"][30176] = "Howard (Terminal arrival)"

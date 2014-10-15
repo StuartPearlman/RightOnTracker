@@ -1,0 +1,197 @@
+/*NavBar*/
+
+.container-fluid {
+    min-width: 400px;
+}
+.navbar-inverse .navbar-brand {
+    color: white;
+    font-size: 2.5em;
+}
+nav.navbar.navbar-inverse {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-radius: 0px;
+    background-color: #0079C2;
+}
+#logout {
+    background-color: #D31146;
+    color: white;
+    height: 2em;
+    margin-top: .75em;
+    text-decoration: none;
+}
+
+#collapse-logout{
+    background-color: #D31146;
+}
+
+
+/*Homepage*/
+
+@media only screen and (min-width: 720px) {
+    .home.splash {
+        background-image: url(/images/cta_train.jpg);
+    }
+    .phone.splash {
+        background-image: url(/images/train_aisle.jpg);
+    }
+    .confirm.splash {
+        background-image: url(/images/train_passing.jpg);
+    }
+    .profile {
+        background-image: url(/images/two_trains.jpg);
+    }
+}
+.splash {
+    height: 100vh;
+    background-color: #191818;
+    background-size: cover;
+}
+.align {
+    text-align: center;
+    color: white;
+    width: 50%;
+    min-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 10%;
+    transform: translateY(-10%);
+    padding-top: 10%;
+}
+#slogan {
+    font-size: 3em;
+}
+.promo {
+    text-align: center;
+    color: white;
+    width: 50%;
+    min-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 10%;
+    transform: translateY(-10%);
+    padding-top: 10%;
+}
+.lead {
+    letter-spacing: .06em;
+    font-size: 2em;
+    color: white;
+}
+#home-link {
+    color: orange;
+}
+.pure-button.cta {
+    font-size: 1.5em;
+    text-decoration: none;
+    background-color: #0079C2;
+    color: white;
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+.pure-button.cta:hover {
+    color: #D31146;
+}
+
+/*Login page*/
+.phone.align, .confirm.align {
+    width: 40%;
+}
+
+#phone-number {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: .5em;
+    font-size: 1.5em;
+    color:black;
+}
+
+#pin {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: .5em;
+    font-size: 1.5em;
+    color:black;
+}
+
+#submit-pin, #receive-pin {
+    display: inline;
+}
+#receive-pin {
+    margin-left: .5em;
+}
+.pure-button.cta.delete, .pure-button.delete {
+    background-color:#D31146;
+    color: white;
+}
+
+.pure-table {
+   margin-top: 3%;
+   margin-bottom: 5%;
+}
+
+.pure-input-1-2 {
+    font-size: 1.5em;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#select-time {
+    text-align: center;
+}
+
+#select-stop, #select-time {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+}
+
+.pure-checkbox {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+.profile{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #191818;
+}
+
+.holder {
+    color: white;
+    width: 50%;
+    min-width: 400px;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+   /* position: relative;
+    top: 10%;
+    transform: translateY(-10%);*/
+    padding-top: 3%;
+}
+
+.divider {
+    margin-bottom: 1%;
+    margin-top: -1%;
+    width: 50%;
+}
+
+.pure-form {
+    margin-bottom: -5%;
+}
+
+label {
+    font-size: 1.3em;
+}
+
+.hidden {
+    display: none;
+}
