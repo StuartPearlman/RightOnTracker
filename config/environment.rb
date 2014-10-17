@@ -29,7 +29,7 @@ configure do
 
   require 'redis'
   uri = URI.parse(ENV["REDISTOGO_URL"] || "redis://localhost:6379/" )
-	redis = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
+	REDIS = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
 end
 
 # Set up the controllers, helpers, and workers
