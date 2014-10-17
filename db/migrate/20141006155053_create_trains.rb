@@ -9,6 +9,6 @@ class CreateTrains < ActiveRecord::Migration
   		t.timestamps
   	end
 
-    add_index :trains, [:user_id, :stop], unique: true 
+    add_index(:trains, :user_id)
   end
 end
