@@ -1,6 +1,7 @@
 helpers do
 	def yellow_line
 		yellow_line = {}
+		
 		yellow_line["30026"] = "Skokie (Arrival)"
 		yellow_line["30027"] = "Skokie (Howard-bound)"
 		yellow_line["30297"] = "Oakton (Dempster-Skokie-bound)"

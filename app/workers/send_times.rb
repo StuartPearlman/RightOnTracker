@@ -9,6 +9,7 @@ class SendTimes
 
 	def perform(train_id)
 		@train = Train.find(train_id)
+		
 		if @train.days.include?(Time.now.in_time_zone('Central Time (US & Canada)').wday.to_s)
 			train_times = parse_arrivals(lines[@train.line][@train.stop], @train.stop, @train.line)
 			phone = User.find(@train.user_id).phone
@@ -57,11 +58,13 @@ class SendTimes
 	def create_client
 		account_sid = ENV['TWILIO_SID']
 		auth_token = ENV['TWILIO_TOKEN']
+		
 		return Twilio::REST::Client.new(account_sid, auth_token)
 	end
 
 	def routes
 		routes = {}
+		
 		routes["Red"] = "red"
 		routes["Blue"] = "blue"
 		routes["Green"] = "g"
@@ -71,11 +74,13 @@ class SendTimes
 		routes["Yellow"] = "y"
 		routes["Pink"] = "pink"
 		routes["Orange"] = "org"
+		
 		return routes
 	end
 
 	def lines
 		lines = {}
+		
 		lines["Red"] = {}
 		lines["Blue"] = {}
 		lines["Green"] = {}
@@ -462,7 +467,8 @@ class SendTimes
 		lines["Orange"]["30039"] = "Randolph/Wabash (Inner Loop)"
 		lines["Orange"]["30124"] = "Madison/Wabash (Inner Loop)"
 		lines["Orange"]["30132"] = "Adams/Wabash (Inner Loop)"
+		
 		return lines
 	end
-
+	
 end

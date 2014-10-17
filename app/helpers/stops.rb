@@ -1,6 +1,7 @@
 helpers do
 	def stops
 		stops = {}
+		
 		stops["30162"] =	"W	18th (54th/Cermak-bound)"
 		stops["30161"] =	"E	18th (Loop-bound)"
 		stops["30022"] =	"N	35th/Archer (Loop-bound)"

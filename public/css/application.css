@@ -1,30 +1,22 @@
 /*NavBar*/
 
-#message {
-    text-align: center;
-    color: white;
-    position: absolute;
-    top: 30%;
-    left: 20%;
-    width: 50%;
-    background-color: darkgray;
-    z-index: 1;
-    display: none;
-}
-
-.container-fluid {
-    min-width: 400px;
-}
-.navbar-inverse .navbar-brand {
-    color: white;
-    font-size: 2.5em;
-}
 nav.navbar.navbar-inverse {
     padding-bottom: 0;
     margin-bottom: 0;
     border-radius: 0px;
     background-color: #0079C2;
 }
+
+.container-fluid {
+    min-width: 400px;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+    font-size: 2.5em;
+}
+
+
 #logout {
     background-color: #D31146;
     color: white;
@@ -37,8 +29,7 @@ nav.navbar.navbar-inverse {
     background-color: #D31146;
 }
 
-
-/*Homepage*/
+/*Layout*/
 
 @media only screen and (min-width: 720px) {
     .home.splash {
@@ -60,11 +51,13 @@ nav.navbar.navbar-inverse {
         background-image: url(/images/bw_map.jpg);
     }
 }
+
 .splash {
     height: 100vh;
     background-color: #191818;
     background-size: cover;
 }
+
 .align {
     text-align: center;
     color: white;
@@ -77,9 +70,28 @@ nav.navbar.navbar-inverse {
     transform: translateY(-10%);
     padding-top: 10%;
 }
+
+/*Shared Button Classes*/
+
+.pure-button.cta {
+    font-size: 1.5em;
+    text-decoration: none;
+    background-color: #0079C2;
+    color: white;
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+
+.pure-button.cta:hover {
+    color: #D31146;
+}
+
+/*Homepage*/
+
 #slogan {
     font-size: 3em;
 }
+
 .promo {
     text-align: center;
     color: white;
@@ -92,27 +104,19 @@ nav.navbar.navbar-inverse {
     transform: translateY(-10%);
     padding-top: 10%;
 }
+
 .lead {
     letter-spacing: .06em;
     font-size: 2em;
     color: white;
 }
+
 #home-link {
     color: orange;
 }
-.pure-button.cta {
-    font-size: 1.5em;
-    text-decoration: none;
-    background-color: #0079C2;
-    color: white;
-    margin-top: 1em;
-    margin-bottom: 3em;
-}
-.pure-button.cta:hover {
-    color: #D31146;
-}
 
 /*Login page*/
+
 .phone.align, .confirm.align {
     width: 40%;
 }
@@ -127,6 +131,8 @@ nav.navbar.navbar-inverse {
     color:black;
 }
 
+/*Confirm page*/
+
 #pin {
     text-align: center;
     margin-left: auto;
@@ -140,9 +146,13 @@ nav.navbar.navbar-inverse {
 #submit-pin, #receive-pin {
     display: inline;
 }
+
 #receive-pin {
     margin-left: .5em;
 }
+
+/*Profile*/
+
 .pure-button.cta.delete, .pure-button.delete {
     background-color:#D31146;
     color: white;
@@ -164,12 +174,6 @@ nav.navbar.navbar-inverse {
     width:auto;
 }
 
-/*#select-stop, #select-time {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1em;
-}*/
-
 .pure-checkbox {
     font-size: 1.2em;
     font-style: italic;
@@ -190,9 +194,6 @@ nav.navbar.navbar-inverse {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-   /* position: relative;
-    top: 10%;
-    transform: translateY(-10%);*/
     padding-top: 3%;
 }
 
@@ -214,6 +215,8 @@ label {
     display: none;
 }
 
+/*Notice page*/
+
 #notice-header {
     font-size: 3.5em;
 }
@@ -229,6 +232,7 @@ label {
 #acknowledge {
     width: 5.7em;
 }
+
 .confirm.align.notice {
     width: 80%;
 }

@@ -1,6 +1,7 @@
 helpers do
 	def blue_line
 		blue_line = {}
+		
 		blue_line["30172"] = "O'Hare Airport (Forest Pk-bound)"
 		blue_line["30171"] = "O'Hare Airport (Terminal Arrival)"
 		blue_line["30160"] = "Rosemont (Forest Pk-bound)"
@@ -67,6 +68,7 @@ helpers do
 		blue_line["30189"] = "Harlem (O'Hare-bound)"
 		blue_line["30076"] = "Forest Park (O'Hare-bound)"
 		blue_line["30077"] = "Forest Park (Terminal Arrival)"
+		
 		return blue_line
 	end
 end
