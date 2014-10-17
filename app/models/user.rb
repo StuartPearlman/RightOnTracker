@@ -1,9 +1,12 @@
 require 'bcrypt'
 
 class User < ActiveRecord::Base
-  validates_uniqueness_of :phone
   include BCrypt
-  has_many :trains
+  
+  has_many :trains, dependent: :destroy
+  
+  validates_uniqueness_of :phone
+  validates_presence_of :phone
 
   def password
     @password ||= Password.new(password_hash)

@@ -5,17 +5,28 @@ post '/users/:user_id/trains/create' do
 			day_string += value
 		end
 
-		@train = Train.create(stop: params[:stop], line: params[:line], user_id: params[:user_id], time: params[:time], days: day_string)
+		@train = Train.create(stop: params[:stop], line: params[:line], user_id: params[:user_id], time: params[:time].to_time, days: day_string)
+
+		if Time.now > @train.time
+			@train.time += (60*60*24)
+			@train.save!
+		end
 
 		SendTimes.perform_at(@train.time, @train.id)
-		
-		erb :"user/_stops_partial", :layout => false
+
+		halt 200, "Stop added!"
 	else
-		halt 400, "Limit of three train stops exceeded. Please delete some train stops to continue."
+		halt 400, "Limit of three train stops exceeded!"
 	end
 end
 
 post '/users/:user_id/trains/:train_id' do
 	Train.destroy(params[:train_id])
-	redirect "users/#{params[:user_id]}"
+	halt 200, "Stop removed!"
 end
+
+get '/users/:user_id/stops' do 
+	content_type 'text/javascript'
+	erb :"user/_stops_partial", :layout => false
+end
+

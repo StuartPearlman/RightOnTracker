@@ -1,0 +1,14 @@
+<script>
+function goBack() {
+	window.history.back()
+}
+</script>
+
+<div class="error splash">
+	<div class="confirm align notice">
+		<h1 id="notice-header"><%= "Something broke. The server says: '#{@error}'. I say, who wrote this thing?!" || "Page not found" %></h1>
+		
+		<button onclick="goBack()" class="pure-button cta">Go Back</button>
+
+	</div>
+</div>

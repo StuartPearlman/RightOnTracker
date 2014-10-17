@@ -1,5 +1,17 @@
 /*NavBar*/
 
+#message {
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    width: 50%;
+    background-color: darkgray;
+    z-index: 1;
+    display: none;
+}
+
 .container-fluid {
     min-width: 400px;
 }
@@ -38,8 +50,14 @@ nav.navbar.navbar-inverse {
     .confirm.splash {
         background-image: url(/images/train_passing.jpg);
     }
+    .notice.splash {
+        background-image: url(/images/train_crossing.jpg);
+    }
     .profile {
         background-image: url(/images/two_trains.jpg);
+    }
+    .error {
+        background-image: url(/images/bw_map.jpg);
     }
 }
 .splash {
@@ -143,14 +161,14 @@ nav.navbar.navbar-inverse {
 }
 
 #select-time {
-    text-align: center;
+    width:auto;
 }
 
-#select-stop, #select-time {
+/*#select-stop, #select-time {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1em;
-}
+}*/
 
 .pure-checkbox {
     font-size: 1.2em;
@@ -167,9 +185,9 @@ nav.navbar.navbar-inverse {
 
 .holder {
     color: white;
-    width: 50%;
-    min-width: 400px;
-    max-width: 70%;
+    width: 60%;
+    min-width: 500px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
    /* position: relative;
@@ -194,4 +212,23 @@ label {
 
 .hidden {
     display: none;
+}
+
+#notice-header {
+    font-size: 3.5em;
+}
+
+#back {
+    margin-right: .8em;
+}
+
+#back:hover {
+    color: #0079C2;
+}
+
+#acknowledge {
+    width: 5.7em;
+}
+.confirm.align.notice {
+    width: 80%;
 }

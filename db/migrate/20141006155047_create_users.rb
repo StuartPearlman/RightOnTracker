@@ -4,6 +4,8 @@ class CreateUsers < ActiveRecord::Migration
   		t.string :phone
   		t.string :password_hash
   		t.timestamps
-  	end  
+  	end 
+
+  	add_index :users, [:id, :phone], unique: true 
   end
 end
