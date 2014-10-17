@@ -87,7 +87,7 @@ $(function() {
                         }, 3500);
                 },
                 error: function(data) {
-                    $("#stop-header").text(data['responseText']);
+                    $("#stop-header").text("An error has occurred.");
 
                     setTimeout(
                         function() {
