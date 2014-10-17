@@ -88,6 +88,7 @@ $(function() {
                 },
                 error: function(data) {
                     $("#stop-header").text("An error has occurred.");
+                    console.log(data);
 
                     setTimeout(
                         function() {
