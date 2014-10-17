@@ -24,6 +24,9 @@ end
 # We need to respect that if we want our Sinatra apps to run on Heroku without modification
 db = URI.parse(ENV['DATABASE_URL'] || "postgres://localhost/#{APP_NAME}_#{Sinatra::Application.environment}")
 
+uri = URI.parse(ENV["REDISTOGO_URL"] || "redis://localhost:6379/" )
+REDIS = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
+
 DB_NAME = db.path[1..-1]
 
 # Note:
