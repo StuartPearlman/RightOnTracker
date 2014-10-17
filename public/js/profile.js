@@ -80,7 +80,9 @@ $(function() {
                 success: function(data) {
                     $("#stop-header").text(data);
                     $('#partials-div').load('/users/' + id + '/stops');
-                    $("#new-stop").trigger('reset'); 
+                    $("#new-stop").trigger('reset');
+                    $(".convenient").addClass("hidden");
+                    $("#Red").removeClass("hidden");
                     setTimeout(
                         function() {
                             $('#stop-header').text("Add a new stop");
