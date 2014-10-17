@@ -11,7 +11,7 @@ Schedules train arrival times to be texted from the CTA automatically
 * All POST routes fully AJAX-ified with custom error routes and handling
 * Generally quite useful!
 
-##Signup and enjoy
+##Sign up and enjoy
 http://rightontracker.herokuapp.com/
 
 
