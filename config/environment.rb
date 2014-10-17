@@ -26,6 +26,10 @@ configure do
   enable :sessions
   set :session_secret, ENV['SESSION_SECRET'] || 'this is a secret shhhhh'
   set :views, File.join(Sinatra::Application.root, "app", "views")
+
+  require 'redis'
+  uri = URI.parse(ENV["REDISTOGO_URL"] || "redis://localhost:6379/" )
+	redis = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
 end
 
 # Set up the controllers, helpers, and workers

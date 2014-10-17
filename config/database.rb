@@ -9,11 +9,8 @@ Dir[APP_ROOT.join('app', 'models', '*.rb')].each do |model_file|
   autoload ActiveSupport::Inflector.camelize(filename), model_file
 end
 
-# Heroku db config
+# Heroku/local postgres db config
 db = URI.parse(ENV['DATABASE_URL'] || "postgres://localhost/#{APP_NAME}_#{Sinatra::Application.environment}")
-
-uri = URI.parse(ENV["REDISTOGO_URL"] || "redis://localhost:6379/" )
-REDIS = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
 
 DB_NAME = db.path[1..-1]
 
