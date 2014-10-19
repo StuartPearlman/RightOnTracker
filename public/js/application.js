@@ -6,3 +6,24 @@ function load(script) {
 load("profile.js");
 load("login.js");
 load("confirm.js");
+
+
+$(function() {
+
+    perfectFit();
+
+    $(window).resize(function() {
+
+        perfectFit();
+    });
+
+    function perfectFit() {
+
+        var winHeight = $(window).height();
+
+        if (winHeight < 500) {
+
+            $(".align").css('height', (winHeight + 500).toString());
+        };
+    };
+});
