@@ -37,9 +37,11 @@ nav.navbar.navbar-inverse {
     }
     .phone.splash {
         background-image: url(/images/train_aisle.jpg);
+        height: 100vh;
     }
     .confirm.splash {
         background-image: url(/images/train_passing.jpg);
+        height: 100vh;
     }
     .notice.splash {
         background-image: url(/images/train_crossing.jpg);
@@ -53,9 +55,11 @@ nav.navbar.navbar-inverse {
 }
 
 .splash {
-    height: 100vh;
-    background-color: #191818;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
+    background-color: #191818;
 }
 
 .align {
