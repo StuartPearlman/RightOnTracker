@@ -19,11 +19,6 @@ $(function() {
 
     function perfectFit() {
 
-        var winHeight = window.screen.availHeight;
-
-        if (winHeight < 1000) {
-
-            $(".align").css('height', (winHeight + 200).toString());
-        };
+        $(".align").css('height', (window.screen.availHeight).toString());
     };
 });
