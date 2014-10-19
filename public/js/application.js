@@ -20,6 +20,5 @@ $(function() {
     function perfectFit() {
 
         $(".align").css('height', (window.screen.availHeight).toString());
-        $(".align").css('width', (window.screen.availWidth).toString());
     };
 });
