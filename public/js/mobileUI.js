@@ -11,7 +11,7 @@ $(function() {
         
         if ($(window).width() < 500) {
             
-            $("a.navbar-brand").replaceWith("<a class='navbar-brand' href='/''><i>Tracker</i></a>");
+            $("a.navbar-brand").replaceWith("<a class='navbar-brand' href='/''>R.O.<i>Tracker</i></a>");
             $('#back').css('margin-right', "0em");
             $("#phone-number,#pin").css("font-size", "1.0em");
             $("th,td,#delete-train").css("font-size", ".5em");

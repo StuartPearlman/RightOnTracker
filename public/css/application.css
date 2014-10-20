@@ -31,26 +31,6 @@ nav.navbar.navbar-inverse {
 
 /*Layout*/
 
-@media only screen and (min-width: 720px) {
-    .home.splash {
-        background-image: url(/images/cta_train.jpg);
-    }
-    .phone.splash {
-        background-image: url(/images/train_aisle.jpg);
-    }
-    .confirm.splash {
-        background-image: url(/images/train_passing.jpg);
-    }
-    .notice.splash {
-        background-image: url(/images/train_crossing.jpg);
-    }
-    .profile {
-        background-image: url(/images/two_trains.jpg);
-    }
-    .error {
-        background-image: url(/images/bw_map.jpg);
-    }
-}
 
 .splash {
     background-repeat: no-repeat;
@@ -90,7 +70,7 @@ nav.navbar.navbar-inverse {
 /*Homepage*/
 
 #slogan {
-    font-size: 3em;
+    font-size: 2em;
 }
 
 .promo {
@@ -105,7 +85,7 @@ nav.navbar.navbar-inverse {
 
 .lead {
     letter-spacing: .06em;
-    font-size: 2em;
+    font-size: 1em;
     color: white;
 }
 
@@ -233,4 +213,31 @@ label {
 
 .confirm.align.notice {
     width: 80%;
+}
+
+@media only screen and (min-width: 720px) {
+    .home.splash {
+        background-image: url(/images/cta_train.jpg);
+    }
+    .phone.splash {
+        background-image: url(/images/train_aisle.jpg);
+    }
+    .confirm.splash {
+        background-image: url(/images/train_passing.jpg);
+    }
+    .notice.splash {
+        background-image: url(/images/train_crossing.jpg);
+    }
+    .profile {
+        background-image: url(/images/two_trains.jpg);
+    }
+    .error {
+        background-image: url(/images/bw_map.jpg);
+    }
+    #slogan {
+        font-size: 3em;
+    }
+    .lead {
+        font-size: 2em;
+    }
 }
