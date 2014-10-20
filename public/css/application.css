@@ -129,6 +129,10 @@ nav.navbar.navbar-inverse {
     margin-left: .5em;
 }
 
+#notice-header {
+    font-size: 2em;
+}
+
 /*Profile*/
 
 .pure-button.cta.delete, .pure-button.delete {
@@ -195,9 +199,6 @@ label {
 
 /*Notice page*/
 
-#notice-header {
-    font-size: 3.5em;
-}
 
 #back {
     margin-right: .8em;
@@ -239,5 +240,8 @@ label {
     }
     .lead {
         font-size: 2em;
+    }
+    #notice-header {
+        font-size: 3.5em;
     }
 }
