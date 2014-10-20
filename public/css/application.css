@@ -106,7 +106,7 @@ nav.navbar.navbar-inverse {
     /*position: relative;*/
    /* top: 10%;
     transform: translateY(-10%);*/
-    /*padding-top: 10%;*/
+    padding-top: 10%;
 }
 
 .lead {
@@ -131,7 +131,7 @@ nav.navbar.navbar-inverse {
     margin-right: auto;
     margin-top: 2em;
     margin-bottom: .5em;
-    font-size: 1.5em;
+    font-size: 1.0em;
     color:black;
 }
 
