@@ -68,9 +68,6 @@ nav.navbar.navbar-inverse {
     min-width: 200px;
     margin-left: auto;
     margin-right: auto;
-    /*position: relative;
-    top: 0%;
-    transform: translateY(0%);*/
     padding-top: 10%;
     height: 100vh;
 }
@@ -103,9 +100,6 @@ nav.navbar.navbar-inverse {
     min-width: 400px;
     margin-left: auto;
     margin-right: auto;
-    /*position: relative;*/
-   /* top: 10%;
-    transform: translateY(-10%);*/
     padding-top: 10%;
 }
 
