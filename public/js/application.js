@@ -24,8 +24,8 @@ $(function() {
             $("a.navbar-brand").replaceWith("<a class='navbar-brand' href='/''><i>Tracker</i></a>");
             $('#back').css('margin-right', "0em");
             $("#phone-number,#pin").css("font-size", "1.0em");
-            $("th,td,#delete-train").css("font-size", ".7em");
-            
+            $("th,td,#delete-train").css("font-size", ".5em");
+
         
         } else {
             
