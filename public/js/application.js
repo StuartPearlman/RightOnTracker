@@ -18,7 +18,12 @@ $(function() {
     });
 
     function perfectFit() {
+        if ($(window).width() < 500) {
+            $("a.navbar-brand").text("Tracker")
+        } else {
+            $("a.navbar-brand").replaceWith("<a class='navbar-brand' href='/''>RightOn<i>Tracker</i></a>");
+        }
 
-        $(".align").css('height', (window.screen.availHeight).toString());
+        $(".align").css('height', ($(document).height()).toString());
     };
 });
