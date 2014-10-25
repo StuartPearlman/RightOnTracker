@@ -3,26 +3,30 @@ $(function() {
     perfectFit();
 
     $(window).resize(function() {
-
-        perfectFit();
+        
+        if($(window).height() < 700) {
+           
+            perfectFit();
+        };
     });
 
     function perfectFit() {
-        
+
         if ($(window).width() < 500) {
-            
+
             $("a.navbar-brand").replaceWith("<a class='navbar-brand' href='/''>R.O.<i>Tracker</i></a>");
             $('#back').css('margin-right', "0em");
             $("#phone-number,#pin").css("font-size", "1.0em");
             $("th,td,#delete-train").css("font-size", ".5em");
+            $("#acknowledge").css("margin-left", "0");
 
-        
         } else {
-            
+
             $("a.navbar-brand").replaceWith("<a class='navbar-brand' href='/''>RightOn<i>Tracker</i></a>");
             $('#back').css('margin-right', ".8em");
             $("#phone-number,#pin").css("font-size", "1.5em");
             $("th,td,#delete-train").css("font-size", "1em");
+            $("#acknowledge").css("margin-left", ".5em");
 
         };
 
