@@ -37,7 +37,11 @@
 
 				<td> <b><%= train.line %></b> - <%= stops[train.stop] %> </td>
 
-				<td> <%= (train.time + Time.zone_offset('CDT')).strftime("%I:%M %p") %> </td>
+				<% if Time.now.dst? %>
+					<td> <%= (train.time + Time.zone_offset('CDT')).strftime("%I:%M %p") %> </td>
+				<% else %>
+					<td> <%= (train.time + Time.zone_offset('CDT') - 3600).strftime("%I:%M %p") %> </td>
+				<% end %>
 
 				<td> <%= day_converter(train.days)%> </td>
 				
