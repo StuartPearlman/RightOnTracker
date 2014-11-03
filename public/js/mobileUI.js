@@ -3,11 +3,8 @@ $(function() {
     perfectFit();
 
     $(window).resize(function() {
-        
-        if($(window).height() < 700) {
            
             perfectFit();
-        };
     });
 
     function perfectFit() {
@@ -30,6 +27,6 @@ $(function() {
 
         };
 
-        $(".align").css('height', ($(document).height()).toString());
+        $(".align").css('height', ($(document).height()).toString() + "px");
     };
 });
