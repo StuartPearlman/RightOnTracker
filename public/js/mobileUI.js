@@ -28,5 +28,6 @@ $(function() {
         };
 
         $(".align").css('height', ($(document).height()).toString() + "px");
+        $(".holder").css('height', ($(document).height()).toString() + "px");
     };
 });
