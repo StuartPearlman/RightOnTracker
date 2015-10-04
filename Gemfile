@@ -22,10 +22,13 @@ gem "bcrypt"
 # Text messaging service
 gem "twilio-ruby"
 
-# Parse CTA API XML response data 
+# Parse CTA API XML response data
 gem 'nokogiri'
 
 # Job queue
 gem 'sidekiq'
 gem 'redis'
 gem 'foreman'
+
+# Deployment
+gem 'heroku-api'

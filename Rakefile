@@ -1,4 +1,6 @@
+require 'heroku-api'
 require 'rake'
+require 'tzinfo'
 
 require ::File.expand_path('../config/environment', __FILE__)
 
@@ -95,4 +97,37 @@ end
 desc 'Start IRB with application environment loaded'
 task "console" do
   exec "irb -r./config/environment"
+end
+
+namespace :dynos do
+  task :scale do
+    is_night = is_night?
+    dynos_running = dynos_running?
+
+    if is_night and dynos_running
+      scale_dynos 0
+    elsif !is_night and !dynos_running
+      scale_dynos 1
+    end
+  end
+
+  def dynos_running?
+    heroku = Heroku::API.new(:api_key => ENV['HEROKU_API_KEY'])
+    dynos = []
+    heroku.get_ps('rightontracker').body.each do |dyno|
+      dynos.push(dyno['state'])
+    end
+    dynos.include? 'up'
+  end
+
+  def is_night?
+    central_time = Time.now.in_time_zone('America/Chicago')
+    (0...6).include? central_time.hour
+  end
+
+  def scale_dynos number
+    heroku = Heroku::API.new(:api_key => ENV['HEROKU_API_KEY'])
+    heroku.post_ps_scale('rightontracker', 'web', number)
+    heroku.post_ps_scale('rightontracker', 'backlog', number)
+  end
 end
